@@ -7,13 +7,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Vegetable Pricing for <span id="date"></span></h1>
+
+    <!-- Header with Farmer Icon -->
+    <header>
+        <img src="farmer.jpeg" alt="Farmer Icon" id="refresh-icon">
+        <h1 style="color: white;">Agricultural Price Tracker</h1>
+    </header>
+
+    <h2><span class="hidden" id="date"></span></h2>
 
     <!-- Date Picker -->
     <div>
         <label for="date-picker">Select a Date:</label>
-        <input onchange={fetchData()} type="date" id="date-picker">
+        <input type="date" id="date-picker" onchange="fetchData()">
     </div>
+
+    <!-- Pricing Table -->
     <table id="pricing-table">
         <thead>
             <tr id="table-headers"></tr>

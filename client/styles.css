@@ -1,34 +1,198 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+:root{
+    root {
+        --bs-blue: #0d6efd;
+        --bs-indigo: #6610f2;
+        --bs-purple: #6f42c1;
+        --bs-pink: #d63384;
+        --bs-red: #dc3545;
+        --bs-orange: #fd7e14;
+        --bs-yellow: #ffc107;
+        --bs-green: #198754;
+        --bs-teal: #20c997;
+        --bs-cyan: #0dcaf0;
+        --bs-white: #fff;
+        --bs-gray: #6c757d;
+        --bs-gray-dark: #343a40;
+        --bs-gray-100: #f8f9fa;
+        --bs-gray-200: #e9ecef;
+        --bs-gray-300: #dee2e6;
+        --bs-gray-400: #ced4da;
+        --bs-gray-500: #adb5bd;
+        --bs-gray-600: #6c757d;
+        --bs-gray-700: #495057;
+        --bs-gray-800: #343a40;
+        --bs-gray-900: #212529;
+        --bs-primary: #0d6efd;
+        --bs-secondary: #6c757d;
+        --bs-success: #198754;
+        --bs-info: #0dcaf0;
+        --bs-warning: #ffc107;
+        --bs-danger: #dc3545;
+        --bs-light: #f8f9fa;
+        --bs-dark: #212529;
+        --bs-primary-rgb: 13, 110, 253;
+        --bs-secondary-rgb: 108, 117, 125;
+        --bs-success-rgb: 25, 135, 84;
+        --bs-info-rgb: 13, 202, 240;
+        --bs-warning-rgb: 255, 193, 7;
+        --bs-danger-rgb: 220, 53, 69;
+        --bs-light-rgb: 248, 249, 250;
+        --bs-dark-rgb: 33, 37, 41;
+        --bs-white-rgb: 255, 255, 255;
+        --bs-black-rgb: 0, 0, 0;
+        --bs-body-color-rgb: 33, 37, 41;
+        --bs-body-bg-rgb: 255, 255, 255;
+        --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+        --bs-body-font-family: var(--bs-font-sans-serif);
+        --bs-body-font-size: 1rem;
+        --bs-body-font-weight: 400;
+        --bs-body-line-height: 1.5;
+        --bs-body-color: #212529;
+        --bs-body-bg: #fff;
+        --background-color: #F6F4E9;
+        --text-color: #210803;
+        --text-color-light: #735d58;
+        --banner-background-color: #FF3500;
+        --banner-text-color: #F6F4E9;
+        --secondary-banner-background-color: #FFD6F8;
+        --secondary-banner-text-color: #FF3500;
+        --button-text-color: #F6F4E9;
+        --button-color: #6FB382;
+        --button-color-hover: #5A8F6F;
+        --button-color-active: #4C7B5A;
+        --button-color-disabled: #A3C6A9;
+        --switch-color: #FF3500;
+        --font-primary: 'Work Sans', sans-serif !important;
+        --menu-background: #fffefc;
+        --menu-background-grey-light: #f9f9f9;
+        --menu-background-grey-dark: #efefef;
+        --menu-background-highlight: #f8f5f1;
+        --menu-border: #d2c9bd;
+        --menu-text: #210803;
+        --menu-text-light: #735d58;
+        --menu-grey-dark: #999999;
+    }
+}
+/* Header Styling */
+header {
+    display: flex;
+    align-items: center;
+    background-color: #007bff;
+    padding: 15px;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Farmer Icon */
+#refresh-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+#refresh-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Center header text */
 h1 {
-    text-align: center;
+    margin: 0;
+    font-size: 24px;
+}
+
+
+body {
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    font-family: 'Poppins', sans-serif;
+    margin: 20px;
+    background-color: #f8f9fa;
     color: #333;
 }
 
-div{
+/* Center and style the heading */
+h1 {
     text-align: center;
+    color: #222;
+    font-weight: 600;
 }
 
+/* Center align the date picker */
+div {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style the date picker */
+input[type="date"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="date"]:hover,
+input[type="date"]:focus {
+    border-color: #007bff;
+}
+
+/* Style the table */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Table header */
+th {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Table cells */
 th, td {
     padding: 12px;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid #ddd;
 }
 
-th {
-    background-color: #f4f4f4;
-    font-weight: bold;
+/* Hover effect */
+tr:hover {
+    background-color: #f1f1f1;
 }
 
-tr:hover {
-    background-color: #f9f9f9;
+/* Image styling */
+td img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Image hover effect */
+td img:hover {
+    transform: scale(1.2);
 }
