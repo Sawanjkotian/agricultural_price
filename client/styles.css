@@ -184,15 +184,3 @@ tr:hover {
 }
 
 /* Image styling */
-td img {
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-/* Image hover effect */
-td img:hover {
-    transform: scale(1.2);
-}
